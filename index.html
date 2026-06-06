@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="郑明栋 - Java 后端开发工程师，9年经验，专注分布式系统、高并发、亿级数据优化">
+  <title>郑明栋 - Java 后端开发工程师</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- 导航栏 -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#about" class="logo">&lt;zmd /&gt;</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" class="active">关于</a></li>
+        <li><a href="#skills">技能</a></li>
+        <li><a href="#projects">项目</a></li>
+        <li><a href="#experience">经历</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button id="themeToggle" class="theme-toggle" aria-label="切换主题">
+          <span class="icon-light">☀</span>
+          <span class="icon-dark">☾</span>
+        </button>
+        <button id="menuToggle" class="menu-toggle" aria-label="菜单">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Hero / 关于 -->
+    <section id="about" class="section-hero">
+      <div class="container">
+        <div class="hero-avatar">郑</div>
+        <h1 class="hero-name">郑明栋</h1>
+        <p class="hero-title">Java 后端开发工程师</p>
+        <p class="hero-subtitle">9年经验 · 专注分布式系统、高并发、亿级数据优化</p>
+        <div class="hero-contact">
+          <span>📧 zhengmingdongwy@163.com</span>
+          <span>📱 17607120806</span>
+          <span>🎓 武汉大学珞珈学院 · 通信工程 · 本科</span>
+        </div>
+        <div class="hero-tags">
+          <span class="tag">Spring Cloud Alibaba</span>
+          <span class="tag">Kafka</span>
+          <span class="tag">Redis</span>
+          <span class="tag">Elasticsearch</span>
+          <span class="tag">MySQL</span>
+          <span class="tag">高并发</span>
+          <span class="tag">分布式事务</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 技能清单 -->
+    <section id="skills" class="section-skills">
+      <div class="container">
+        <p class="section-label">技能清单</p>
+        <h2 class="section-title">技术栈</h2>
+        <div class="skills-grid">
+          <div class="skill-item">
+            <h3>框架</h3>
+            <p>Spring Boot / Spring Cloud Alibaba / Spring MVC / MyBatis / MyBatis-Plus</p>
+          </div>
+          <div class="skill-item">
+            <h3>数据库</h3>
+            <p>MySQL / PostgreSQL / Mycat / Oracle · 亿级数据优化经验</p>
+          </div>
+          <div class="skill-item">
+            <h3>中间件</h3>
+            <p>Kafka / Redis / Elasticsearch / RabbitMQ / Canal / Active-MQ</p>
+          </div>
+          <div class="skill-item">
+            <h3>工具 &amp; 平台</h3>
+            <p>Nacos / Gateway / xxl-job / Flyway / Sentinel / Zipkin / Hystrix</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 项目经验 -->
+    <section id="projects" class="section-projects">
+      <div class="container">
+        <p class="section-label">项目经验</p>
+        <h2 class="section-title">核心项目</h2>
+        <div class="project-list">
+          <div class="project-card">
+            <div class="project-head">
+              <h3>天工研发管理平台</h3>
+              <span class="project-company">博彦科技</span>
+            </div>
+            <p class="project-tech">Code Buddy · Openspec · Spring Cloud · MySQL · Redis · MyBatis</p>
+            <div class="project-body">
+              <div class="project-section">
+                <h4>项目描述</h4>
+                <p>研发效能管理平台帮助团队更高效、更透明地完成研发工作，同时让管理者清晰掌握项目进展和资源投入。核心业务包括：需求全周期管理（可视化看板、甘特图、燃尽图）、资源优化（人力/时间投入统计）、质量与风险控制（代码提交+测试报告+缺陷数据关联，预测交付时间）、团队协同提效（统一门户集成需求/代码/文档，自动化周报/复盘报告）。</p>
+              </div>
+              <div class="project-section">
+                <h4>职责</h4>
+                <ul>
+                  <li>负责项目管理模块的需求分析、设计与开发（项目集信息维护、流程模板关联）</li>
+                  <li>项目提醒：异常项目提醒、项目成本提醒、项目进展提醒、项目风险提醒</li>
+                  <li>在线立项文档</li>
+                  <li>项目信息重构</li>
+                  <li>项目生命周期管理</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-head">
+              <h3>CBS 集团业财资金管理系统</h3>
+              <span class="project-company">招银云创</span>
+            </div>
+            <p class="project-tech">Spring Cloud Alibaba · Nacos · Gateway · Ribbon · Feign · RabbitMQ · MySQL · Redis · MyBatis-Plus · xxl-job</p>
+            <div class="project-body">
+              <div class="project-section">
+                <h4>项目描述</h4>
+                <p>支付管理模块作为财资管理云 CBS 的核心模块之一，集成跨银行、跨币种结算，覆盖供应商付款、成员单位内部调拨、员工报销、代发工资、集团资金归集与回拨等多样化业务场景，支持用户迅速查询支付结果，确保资金流动的透明性和实时性。</p>
+              </div>
+              <div class="project-section">
+                <h4>职责</h4>
+                <ul>
+                  <li>参与支付结算模块日常迭代开发与技改</li>
+                  <li>系统设计：服务由原 TMS 长链路调用改为异步调用，保证全局事务一致性下完成服务解耦，缩短结算支付链路</li>
+                  <li>支付防重方案设计</li>
+                  <li>优化结算服务，大批量数据导入经办性能由 2000 笔 → 20000 笔</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-head">
+              <h3>智慧工会</h3>
+              <span class="project-company">招银云创</span>
+            </div>
+            <p class="project-tech">Spring Cloud Alibaba · Nacos · Gateway · Ribbon · Feign · Kafka · MySQL · Redis · MyBatis-Plus · xxl-job</p>
+            <div class="project-body">
+              <div class="project-section">
+                <h4>项目描述</h4>
+                <p>招商银行工会系统，旨在满足行内员工工作方式"线上化"升级。实现员工关怀或扶贫工作的效率开展，提升福利、关怀形式的多样性。最大化融合信息技术优势，简化工作流程，实现数据沉淀和挖掘，解放工会干部生产力。模块包括：活动（发起/报名/签到/推荐/统计）、圈子（社交化延伸）、会议管理、表单收集与福利申请、俱乐部。</p>
+              </div>
+              <div class="project-section">
+                <h4>职责</h4>
+                <ul>
+                  <li>指导初级开发人员日常工作事宜，把握项目整体进度</li>
+                  <li>对系统中疑难问题分析定位，提供解决思路</li>
+                  <li>初级开发人员的 Code Review</li>
+                  <li>生产环境 OOM 问题分析定位解决</li>
+                  <li>解决 Nacos 数据库密码加密后运行一段时间自动连接不上数据库的问题</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-head">
+              <h3>智慧云眼大数据分析平台</h3>
+              <span class="project-company">云眼视界</span>
+            </div>
+            <p class="project-tech">Spring Cloud Alibaba · Nacos · Zuul · Ribbon · Feign · Sentinel · Kafka · PostgreSQL · Flyway · Redis · Dgraph · MyBatis-Plus · xxl-job · Nginx</p>
+            <div class="project-body">
+              <div class="project-section">
+                <h4>项目描述</h4>
+                <p>依托互联网对社会面视频监控资源进行整合，基于 AI 和大数据分析，提供高价值的视频、人像、车辆等智能分析与数据服务，满足面向公安、综治等行业的场景化应用。系统由视频大数据 web 端、新闻和线索 web 端、视频大数据 APP、视图联网、智慧城管平台共五个板块构成。</p>
+              </div>
+              <div class="project-section">
+                <h4>职责</h4>
+                <ul>
+                  <li>负责社区模块、人员模块、车辆模块、智慧城管的业务迭代</li>
+                  <li>架构升级：Spring Cloud + Zookeeper → Spring Cloud Alibaba + Nacos</li>
+                  <li>大数据量级 SQL 查询优化（单表 5000w-2 亿），接口响应时间 30s → 1.5s-2s</li>
+                  <li>人员、车辆 Excel 高并发导入</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="moreProjects" class="project-list project-list-hidden">
+          <div class="project-card">
+            <div class="project-head">
+              <h3>Duck</h3>
+              <span class="project-company">追忆那年</span>
+            </div>
+            <p class="project-tech">Spring Cloud · Eureka · Gateway · Ribbon · Feign · Zipkin · Hystrix · MySQL · Redis · Mycat · MyBatis-Plus · Kafka · Elasticsearch · Kibana · Logstash</p>
+            <div class="project-body">
+              <div class="project-section">
+                <h4>项目描述</h4>
+                <p>基于地理位置、面向大学校园的社交产品，通过清洗小程序关系链将用户拉新进入 Duck，分为四个 tab（首页、发现、消息、我的）。</p>
+              </div>
+              <div class="project-section">
+                <h4>职责</h4>
+                <ul>
+                  <li>解决动态发布及运营动态 Excel 导入时地理位置保存的高并发问题</li>
+                  <li>首页动态列表优化：引入 ES 搜索引擎，展示时间 5s → 1s 以内</li>
+                  <li>好友请求启动弹窗卡片：采用 Redis 管道高速有序处理，防止消息重复</li>
+                  <li>高校抽奖活动独立开发：使用乐观锁和 Redis 分布式锁解决高并发问题</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-head">
+              <h3>忆年共享相册</h3>
+              <span class="project-company">追忆那年</span>
+            </div>
+            <p class="project-tech">Spring Cloud · MyBatis-Plus · MySQL · Redis · Elasticsearch · Mycat · Canal · Active-MQ · Logstash · Kibana</p>
+            <div class="project-body">
+              <div class="project-section">
+                <h4>项目描述</h4>
+                <p>最初为用户提供免费照片存储及共享的微信小程序，后转型为大学校园社交产品，分为四个 tab（首页、消息、相册、我的），用户量千万级别。</p>
+              </div>
+              <div class="project-section">
+                <h4>职责</h4>
+                <ul>
+                  <li>后端架构升级：Spring Boot 1.5.9 → 2.1.3，Spring Cloud 版本同步升级</li>
+                  <li>微信小程序后端 SDK 接入</li>
+                  <li>消息推送模块：通过设计模式优化代码，不同消息只需添加不同模板</li>
+                  <li>好友双向关注：合理表设计解决关系维护问题，Redis 数据结构解决好友关系变更即时性</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-head">
+              <h3>玩转熊</h3>
+              <span class="project-company">追忆那年</span>
+            </div>
+            <p class="project-tech">Spring Boot · MyBatis-Plus · Quartz · Shiro · MySQL · Redis</p>
+            <div class="project-body">
+              <div class="project-section">
+                <h4>项目描述</h4>
+                <p>游戏推广平台，用户通过下载游戏和应用做任务（充值/升级任务），提交截图审核通过后获得奖励。同时作为广告对接平台，CP 提供上报链接，通过客户端或服务端上报跳转 App Store，玩家下载达到激活要求后 CP 回调匹配。</p>
+              </div>
+              <div class="project-section">
+                <h4>职责</h4>
+                <ul>
+                  <li>广告对接模块：与各广告商和游戏厂商对接</li>
+                  <li>用户体系及金币计算：用户信息、金币变更历史，提现/充值对接支付宝</li>
+                  <li>玩家任务：阶梯任务设定，上游埋点触发回调，更新任务完成状态</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-head">
+              <h3>ASMS10000 后台 — 优惠券</h3>
+              <span class="project-company">追忆那年</span>
+            </div>
+            <p class="project-tech">Spring MVC · Spring · MyBatis · Redis · Oracle</p>
+            <div class="project-body">
+              <div class="project-section">
+                <h4>项目描述</h4>
+                <p>专为中小型旅行社设计的后台系统，优惠券模块涉及 20+ 张表。券种分为优惠券、优惠卡、商旅卡三类。通过用户画像记录分析行为习惯，在合适时机推送产品及优惠信息。以热门产品带动冷门产品，客服可操作定制优惠券发放系统，支持预存款、协议欠款、支付宝、微信等混合支付。</p>
+              </div>
+              <div class="project-section">
+                <h4>职责</h4>
+                <ul>
+                  <li>优惠券发布、审核、删除等操作</li>
+                  <li>优惠券支付：组合支付选择、检查、支付失败处理</li>
+                  <li>优惠券使用规则与发放</li>
+                  <li>优惠券相关接口开发并与前端联调</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-head">
+              <h3>创视云端</h3>
+              <span class="project-company">追忆那年</span>
+            </div>
+            <p class="project-tech">Spring MVC · Spring · MyBatis · Redis · RabbitMQ · MySQL</p>
+            <div class="project-body">
+              <div class="project-section">
+                <h4>项目描述</h4>
+                <p>类似八角星、逗拍的视频制作 App，用户可根据视频模板替换文字和图片合成视频，几分钟即可成片，极大提升视频制作效率，支持个性化模板定制服务。</p>
+              </div>
+              <div class="project-section">
+                <h4>职责</h4>
+                <ul>
+                  <li>相关接口及表设计，采用 MVC 分层设计模式</li>
+                  <li>App 支付：使用 Ping++ 中间件完成支付宝和微信支付</li>
+                  <li>首页商城列表 Redis 缓存，减少数据库压力</li>
+                  <li>优惠券生成与发放</li>
+                  <li>短信验证码发送</li>
+                  <li>合成视频使用阿里云 OSS 存储</li>
+                  <li>QQ、微信第三方登录</li>
+                  <li>用户收藏、用户信息编辑、绑定 QQ/微信/手机号</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button id="toggleProjects" class="btn-expand" aria-expanded="false">
+          展开更多项目（5个）
+          <span class="arrow">▼</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- 工作经历 -->
+    <section id="experience" class="section-experience">
+      <div class="container">
+        <p class="section-label">工作经历</p>
+        <h2 class="section-title">职业历程</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot active"></div>
+            <div class="timeline-content">
+              <h3>博彦科技股份有限公司<span>（招证外包）</span></h3>
+              <p class="timeline-date">2024.07 — 至今</p>
+              <p class="timeline-desc">天工研发管理平台 · Java 后端开发</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot active"></div>
+            <div class="timeline-content">
+              <h3>招银云创信息技术有限公司武汉分公司</h3>
+              <p class="timeline-date">2021.08 — 2024.04</p>
+              <p class="timeline-desc">CBS 集团业财资金管理系统 · 智慧工会</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h3>江西云眼视界科技股份有限公司武汉分公司</h3>
+              <p class="timeline-date">2020.04 — 2021.08</p>
+              <p class="timeline-desc">智慧云眼大数据分析平台 · 视频大数据</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h3>武汉市追忆那年网络科技有限公司</h3>
+              <p class="timeline-date">2017.07 — 2019.12</p>
+              <p class="timeline-desc">忆年共享相册 · Duck · 玩转熊 · ASMS10000 · 创视云端</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 郑明栋</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

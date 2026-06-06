@@ -582,6 +582,27 @@ section {
 }
 
 /* ========================================
+   Click-to-copy
+   ======================================== */
+.copyable {
+  cursor: pointer;
+  padding: 3px 8px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  user-select: none;
+}
+
+.copyable:hover {
+  background-color: var(--primary-light);
+  color: var(--primary);
+}
+
+.copyable.copied {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+/* ========================================
    Footer
    ======================================== */
 footer {

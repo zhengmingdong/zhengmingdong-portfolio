@@ -118,4 +118,43 @@
       });
     });
   }
+  // ==========================================
+  // 6. 点击复制
+  // ==========================================
+  document.querySelectorAll('.copyable').forEach(function (el) {
+    el.addEventListener('click', function () {
+      var text = el.getAttribute('data-copy');
+      if (!text) return;
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(function () {
+          showCopyFeedback(el);
+        });
+      } else {
+        // Fallback for older browsers
+        var ta = document.createElement('textarea');
+        ta.value = text;
+        ta.style.position = 'fixed';
+        ta.style.left = '-9999px';
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+        showCopyFeedback(el);
+      }
+    });
+  });
+
+  function showCopyFeedback(el) {
+    var original = el.getAttribute('data-original-text');
+    if (!original) {
+      original = el.textContent;
+      el.setAttribute('data-original-text', original);
+    }
+    el.textContent = '✓ 已复制';
+    el.classList.add('copied');
+    setTimeout(function () {
+      el.textContent = original;
+      el.classList.remove('copied');
+    }, 1500);
+  }
 })();

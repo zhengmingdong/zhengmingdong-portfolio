@@ -597,9 +597,33 @@ section {
   color: var(--primary);
 }
 
-.copyable.copied {
-  background-color: #dcfce7;
-  color: #166534;
+/* Copy toast */
+.copy-toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: #0f172a;
+  color: #e2e8f0;
+  padding: 10px 24px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-family: inherit;
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+}
+
+[data-theme="dark"] .copy-toast {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+
+.copy-toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
 }
 
 /* ========================================

@@ -127,34 +127,55 @@
       if (!text) return;
       if (navigator.clipboard && navigator.clipboard.writeText) {
         navigator.clipboard.writeText(text).then(function () {
-          showCopyFeedback(el);
+          showToast(el);
+        }).catch(function () {
+          fallbackCopy(text, el);
         });
       } else {
-        // Fallback for older browsers
-        var ta = document.createElement('textarea');
-        ta.value = text;
-        ta.style.position = 'fixed';
-        ta.style.left = '-9999px';
-        document.body.appendChild(ta);
-        ta.select();
-        document.execCommand('copy');
-        document.body.removeChild(ta);
-        showCopyFeedback(el);
+        fallbackCopy(text, el);
       }
     });
   });
 
-  function showCopyFeedback(el) {
-    var original = el.getAttribute('data-original-text');
-    if (!original) {
-      original = el.textContent;
-      el.setAttribute('data-original-text', original);
+  function fallbackCopy(text, el) {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.left = '-9999px';
+    ta.style.top = '-9999px';
+    document.body.appendChild(ta);
+    ta.focus();
+    ta.select();
+    try {
+      document.execCommand('copy');
+      showToast(el);
+    } catch (e) {
+      // silently fail
     }
-    el.textContent = '✓ 已复制';
-    el.classList.add('copied');
+    document.body.removeChild(ta);
+  }
+
+  function showToast(el) {
+    var text = el.getAttribute('data-copy');
+    // Remove existing toast
+    var existing = document.querySelector('.copy-toast');
+    if (existing) existing.remove();
+
+    var toast = document.createElement('div');
+    toast.className = 'copy-toast';
+    toast.textContent = '✓ 已复制：' + text;
+    document.body.appendChild(toast);
+
+    // Trigger animation
+    requestAnimationFrame(function () {
+      toast.classList.add('show');
+    });
+
     setTimeout(function () {
-      el.textContent = original;
-      el.classList.remove('copied');
-    }, 1500);
+      toast.classList.remove('show');
+      setTimeout(function () {
+        if (toast.parentNode) toast.parentNode.removeChild(toast);
+      }, 300);
+    }, 1800);
   }
 })();
